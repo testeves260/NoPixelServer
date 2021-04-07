@@ -179,7 +179,7 @@ function updateCarDueDates()
                 })
             end
         end
-        print('^1[Evolved RP] ^5Updated all Financing Due Dates for ^2' ..changed ..'^5 vehicles.^7')
+        print('^1[NoPixel RP] ^5Updated all Financing Due Dates for ^2' ..changed ..'^5 vehicles.^7')
     end)
 end
 
