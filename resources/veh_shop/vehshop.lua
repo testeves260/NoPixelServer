@@ -807,7 +807,6 @@ function SpawnSaleVehicles()
 		spawnedvehicles[#spawnedvehicles + 1] = veh
 		SetVehicleNumberPlateText(veh, i .. "CARSALE")
 	end
-	print("no crashy")
 	vehicles_spawned = true
 end
 
