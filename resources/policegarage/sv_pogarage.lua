@@ -18,7 +18,7 @@ function SignOnRadio(src)
 	local user = exports["np-base"]:getModule("Player"):GetUser(src)
 	local char = user:getCurrentCharacter()
 
-	local q = [[SELECT id, owner, cid, job, callsign, rank FROM jobs_whitelist WHERE cid = @cid AND (job = 'police' or job = 'doc')]]
+	local q = [[SELECT id, owner, cid, job, callsign, `rank` FROM jobs_whitelist WHERE cid = @cid AND (job = 'police' or job = 'doc')]]
 	local v = {["cid"] = char.id}
 
 	exports.ghmattimysql:execute(q, v, function(results)

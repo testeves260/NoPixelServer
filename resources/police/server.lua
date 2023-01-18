@@ -709,7 +709,7 @@ AddEventHandler('police:whitelist', function(arg,jobType)
 	local char = user:getCurrentCharacter()
 
 	if jobType == "police" or jobType == "ems" or jobType == "doctor" or jobType == "therapist" or jobType == "doc" then
-		exports.ghmattimysql:execute("SELECT rank from jobs_whitelist WHERE job = @job AND cid = @cid",{['job'] = jobType, ["cid"] = arg}, function(result)
+		exports.ghmattimysql:execute("SELECT `rank` from jobs_whitelist WHERE job = @job AND cid = @cid",{['job'] = jobType, ["cid"] = arg}, function(result)
 			if(result[1]) then
 				TriggerClientEvent("DoLongHudText", src, 'This person is already on the list.', 2)
 			else
@@ -747,7 +747,7 @@ AddEventHandler('police:remove', function(arg,jobType)
 	local char = user:getCurrentCharacter()
 
 	if jobType == "police" or jobType == "ems" or jobType == "doctor" or jobType == "therapist" or jobType == "doc" then
-		exports.ghmattimysql:execute("SELECT rank from jobs_whitelist WHERE job = @job AND cid = @cid",{['job'] = jobType, ["cid"] = arg}, function(result)
+		exports.ghmattimysql:execute("SELECT `rank` from jobs_whitelist WHERE job = @job AND cid = @cid",{['job'] = jobType, ["cid"] = arg}, function(result)
 			if(result[1]) then
 				TriggerClientEvent("DoLongHudText", src, 'This person is already on the list.', 2)
 			else

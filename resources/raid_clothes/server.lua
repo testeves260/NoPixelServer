@@ -291,7 +291,7 @@ AddEventHandler("clothing:checkIfNew", function()
     local cid = user:getCurrentCharacter().id
     local dateCreated = user:getCurrentCharacter()
 
-    exports.ghmattimysql:execute("SELECT count(rank) whitelist FROM jobs_whitelist WHERE cid = @cid LIMIT 1", {
+    exports.ghmattimysql:execute("SELECT count(`rank`) whitelist FROM jobs_whitelist WHERE cid = @cid LIMIT 1", {
         ['cid'] = cid
     }, function(isWhitelisted)
         exports.ghmattimysql:scalar("SELECT count(model) FROM character_current WHERE cid = @cid LIMIT 1", {

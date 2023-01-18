@@ -510,7 +510,7 @@ onNet("server-inventory-close", async (player, targetInventoryName) => {
         }
     }
     emit("server-request-update-src", player, source) 
-    sendClientItemList(src)
+    // sendClientItemList(src) -> this is not defined, wtf ? who created this shit ? need a purpose ?
 });
 
 

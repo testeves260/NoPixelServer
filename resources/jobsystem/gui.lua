@@ -50,7 +50,7 @@ function Menu.updateSelection()
 		else
 			Menu.selection = Menu.buttonCount-1
 		end
-	elseif IsControlJustPressed(1, Keys["NENTER"])  then
+	elseif IsControlJustPressed(1, Keys["ENTER"])  then
 			MenuCallFunction(Menu.GUI[Menu.selection +1]["func"], Menu.GUI[Menu.selection +1]["args"])
 			Menu.hidden = not Menu.hidden 
 	end

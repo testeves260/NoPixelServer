@@ -7,7 +7,7 @@ end
 function NPX.Jobs.IsWhiteListed(self, hexId, characterId, job, callback)
     if not hexId or not characterId then return end
 
-    local q = [[SELECT cid, owner, cid, job, rank FROM jobs_whitelist WHERE cid = @cid AND job = @job LIMIT 1]]
+    local q = [[SELECT cid, owner, cid, job, `rank` FROM jobs_whitelist WHERE cid = @cid AND job = @job LIMIT 1]]
     local v = {["owner"] = hexId, ["cid"] = characterId, ["job"] = job}
 
     exports.ghmattimysql:execute(q, v, function(results)

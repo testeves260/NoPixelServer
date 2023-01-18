@@ -508,7 +508,7 @@ function runPickup()
 
         if( #(playerCo - vector3( back["x"], back["y"], back["z"] )) < 15.0) then
             DrawText3Ds(back["x"], back["y"], back["z"],"Press ~r~"..Controlkey["generalUse"][2].."~w~ to store then check for more.")
-            if( IsControlJustPressed(1,Controlkey["generalUse"][1]) ) and #(playerCo - vector3( back["x"], back["y"], back["z"] )) < 1.0 then
+            if( IsControlJustPressed(1,Controlkey["generalUse"][1]) ) and #(playerCo - vector3( back["x"], back["y"], back["z"] )) < 2.5 then
                 stopCarry()
                 attachBox()
                 hasPackedCargo = true

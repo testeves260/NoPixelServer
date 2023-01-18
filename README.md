@@ -17,3 +17,6 @@ original credit:
 7. Run `set-passwords.bat` (requires wlr - I used [Ubuntu](https://ubuntu.com/wsl))
     - If you screw this up, the database information goes in `resources/ghmattimysql/config.json` and the rest of the information is in server.cfg
 9. Start the server
+
+
+10. Change your mysql policy SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));

@@ -60,7 +60,7 @@ end
 function IsWhiteListed(hexId, characterId, callback)
     if not hexId or not characterId then return end
     
-    local q = [[SELECT id, owner, cid, job, rank FROM jobs_whitelist WHERE cid = @cid;]]
+    local q = [[SELECT id, owner, cid, job, `rank` FROM jobs_whitelist WHERE cid = @cid;]]
     local v = {['owner'] = hexId, ['cid'] = characterId}
 
     exports.ghmattimysql:execute(q,v, function(results)

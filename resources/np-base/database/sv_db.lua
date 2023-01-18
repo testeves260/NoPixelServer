@@ -21,7 +21,7 @@ function NPX.DB.CreateNewPlayer(self, src, callback)
         end
     end
 
-    local q = [[INSERT INTO users (hex_id, steam_id, community_id, license, ip, name, rank)
+    local q = [[INSERT INTO users (hex_id, steam_id, community_id, license, ip, name, `rank`)
                 VALUES(@hexid, @steamid, @comid, @license, @ip, @name, @rank);]]
     local v = {
         ["hexid"] = data.hexid,
@@ -129,7 +129,7 @@ function NPX.DB.FetchPlayerData(self, src, callback)
 
     if not hexId or hexId == "" then callback(false, true) return end
 
-    local q = [[SELECT id, hex_id, steam_id, community_id, name, ip, rank FROM users WHERE hex_id = @id;]]
+    local q = [[SELECT id, hex_id, steam_id, community_id, name, ip, `rank` FROM users WHERE hex_id = @id;]]
     local v = {["id"] = hexId}
 
     exports.ghmattimysql:execute(q, v, function(results)

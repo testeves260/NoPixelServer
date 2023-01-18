@@ -219,7 +219,7 @@ end
 RegisterServerEvent('group:pullinformation')
 AddEventHandler('group:pullinformation', function(groupid,rank)
   local src = source
-  exports.ghmattimysql:execute("SELECT * FROM character_passes WHERE pass_type = @groupid and rank > 0 ORDER BY rank DESC", {['groupid'] = groupid}, function(results)
+  exports.ghmattimysql:execute("SELECT * FROM character_passes WHERE pass_type = @groupid and `rank` > 0 ORDER BY `rank` DESC", {['groupid'] = groupid}, function(results)
     if results ~= nil then
       exports.ghmattimysql:execute("SELECT bank FROM group_banking WHERE group_type = @groupid", {['groupid'] = groupid}, function(result)
         local bank = 0
@@ -500,7 +500,7 @@ AddEventHandler('checkTypes', function()
   end)
 
 
---   exports.ghmattimysql:execute("SELECT rank FROM jobs_whitelist WHERE job = @job AND cid = @cid", {['job'] = "therapist", ["cid"] = cid}, function(result2)
+--   exports.ghmattimysql:execute("SELECT `rank` FROM jobs_whitelist WHERE job = @job AND cid = @cid", {['job'] = "therapist", ["cid"] = cid}, function(result2)
 --     if(result2 ~= nil and result2[1] ~= nil) then
 --       if result2[1].rank >= 1 then
 --         TriggerClientEvent("isTherapist",src)
