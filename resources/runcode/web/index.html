@@ -317,7 +317,7 @@
 			document.querySelector('#passwordField').style.display = 'none';
 			document.querySelector('html').classList.add('in-nui');
 
-			fetch(`http://${window.parent.GetParentResourceName()}/getOpenData`, {
+			fetch(`https://${window.parent.GetParentResourceName()}/getOpenData`, {
 				method: 'POST',
 				body: '{}'
 			}).then(a => a.json())

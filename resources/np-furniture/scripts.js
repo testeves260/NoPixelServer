@@ -24,7 +24,7 @@ $(document).ready(function(){
 
   $(".btnClose").click(function(){
       closeMain()
-      $.post('http://np-furniture/close', JSON.stringify({}));
+      $.post('https://np-furniture/close', JSON.stringify({}));
   });
 
   $(".btnNew").click(function(){
@@ -45,20 +45,20 @@ $(document).ready(function(){
   $(".btnMove").click(function(){
       $(".wrapSelectObjects").css("display", "none");
       $(".SelectObject").css("display", "none");
-      $.post('http://np-furniture/scanObject', JSON.stringify({}));
+      $.post('https://np-furniture/scanObject', JSON.stringify({}));
   });
 
   $(".btnFree").click(function(){
       $(".wrapSelectObjects").css("display", "none");
       $(".SelectObject").css("display", "none");
-      $.post('http://np-furniture/FreeCam', JSON.stringify({}));
+      $.post('https://np-furniture/FreeCam', JSON.stringify({}));
   });
 
 
   $(".btnModify").click(function(){
       $(".wrapSelectObjects").css("display", "none");
       $(".SelectObject").css("display", "none");
-      $.post('http://np-furniture/newObject', JSON.stringify({}));
+      $.post('https://np-furniture/newObject', JSON.stringify({}));
 
   });
   $(".btnLeaveDel").click(function(){
@@ -67,7 +67,7 @@ $(document).ready(function(){
   });
 
   $(".btnDelObj").click(function(){
-    $.post('http://np-furniture/DelSelectedObj', JSON.stringify({}));
+    $.post('https://np-furniture/DelSelectedObj', JSON.stringify({}));
   });
 
 
@@ -76,14 +76,14 @@ $(document).ready(function(){
       $(".SelectObject").css("display", "none");
       $(".wrapbuttons").css("display", "none");
       $(".NextPrev").css("display", "block");
-      $.post('http://np-furniture/DelObj', JSON.stringify({}));
+      $.post('https://np-furniture/DelObj', JSON.stringify({}));
   });
 
   $(".btnNextObj").click(function(){
-    $.post('http://np-furniture/NextObj', JSON.stringify({}));
+    $.post('https://np-furniture/NextObj', JSON.stringify({}));
   });
   $(".btnPrevObj").click(function(){
-    $.post('http://np-furniture/PrevObj', JSON.stringify({}));
+    $.post('https://np-furniture/PrevObj', JSON.stringify({}));
   });
 
 
@@ -161,7 +161,7 @@ $(document).ready(function(){
               $list.hide();
 
 
-              $.post('http://np-furniture/selectObject', JSON.stringify({selectObject: $this.val()}));
+              $.post('https://np-furniture/selectObject', JSON.stringify({selectObject: $this.val()}));
           });
         
           $(document).click(function() {

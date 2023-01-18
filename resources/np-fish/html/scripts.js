@@ -109,7 +109,7 @@ $(document).ready(function(){
   // On 'Esc' call close method
   document.onkeyup = function (data) {
     if (data.which == 27 ) {
-      $.post('http://np-fish/close', JSON.stringify({}));
+      $.post('https://np-fish/close', JSON.stringify({}));
     }
   };
 });

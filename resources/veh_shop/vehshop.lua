@@ -594,7 +594,6 @@ AddEventHandler(
 	"finance",
 	function()
 		if rank == 0 or #(vector3(-51.51, -1077.96, 26.92) - GetEntityCoords(PlayerPedId())) > 50.0 then
-			print("HERE?")
 			return
 		end
 		local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)

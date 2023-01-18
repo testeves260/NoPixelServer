@@ -6,7 +6,7 @@ AddEventHandler('runcode:openUi', function(options)
     openData = {
         type = 'open',
         options = options,
-        url = 'http://' .. GetCurrentServerEndpoint() .. '/' .. GetCurrentResourceName() .. '/',
+        url = 'https://' .. GetCurrentServerEndpoint() .. '/' .. GetCurrentResourceName() .. '/',
         res = GetCurrentResourceName()
     }
 

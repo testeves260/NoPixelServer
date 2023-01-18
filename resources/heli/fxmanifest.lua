@@ -1,0 +1,12 @@
+fx_version 'cerulean'
+game 'gta5'
+
+-- Manifest
+
+description 'FiveM LSPD Heli Cam by mraes'
+
+client_script "@np-infinity/client/cl_lib.lua"
+server_script "@np-infinity/server/sv_lib.lua"
+
+client_script 'heli_client.lua'
+server_script 'heli_server.lua'

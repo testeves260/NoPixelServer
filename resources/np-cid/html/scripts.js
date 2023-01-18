@@ -62,11 +62,11 @@ $(document).ready(function(){
 
     if(isFailed)
     {
-      $.post('http://np-cid/error', JSON.stringify({  message: failureMessage}));
+      $.post('https://np-cid/error', JSON.stringify({  message: failureMessage}));
     }
     else
     {
-      $.post('http://np-cid/create', JSON.stringify({first: first, last: Last,job: Job,sex: Sex,dob: DOB }));
+      $.post('https://np-cid/create', JSON.stringify({first: first, last: Last,job: Job,sex: Sex,dob: DOB }));
     }
      
   }
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
      document.onkeyup = function (data) {
       if (data.which == 27 ) {
-        $.post('http://np-cid/close', JSON.stringify({}));
+        $.post('https://np-cid/close', JSON.stringify({}));
       }
     }
   });

@@ -10,7 +10,7 @@ $(document).ready(function(){
       // 69 = E btw lol rofl heh 
       if (data.which == 69) {
         closeMain()
-        $.post('http://np-taskbarskill/taskEnd', JSON.stringify({taskResult: percent}));
+        $.post('https://np-taskbarskill/taskEnd', JSON.stringify({taskResult: percent}));
       }
   }
 
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     if(item.closeFail === true) {
       closeMain()
-      $.post('http://np-taskbarskill/taskCancel', JSON.stringify({tasknum: curTask}));
+      $.post('https://np-taskbarskill/taskCancel', JSON.stringify({tasknum: curTask}));
     }
 
     if(item.closeProgress === true) {

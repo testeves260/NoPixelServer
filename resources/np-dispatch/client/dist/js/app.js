@@ -2289,7 +2289,7 @@
                     qr = m(
                         "allowfullscreen,async,autofocus,autoplay,checked,compact,controls,declare,default,defaultchecked,defaultmuted,defaultselected,defer,disabled,enabled,formnovalidate,hidden,indeterminate,inert,ismap,itemscope,loop,multiple,muted,nohref,noresize,noshade,novalidate,nowrap,open,pauseonexit,readonly,required,reversed,scoped,seamless,selected,sortable,translate,truespeed,typemustmatch,visible"
                     ),
-                    Wr = "http://www.w3.org/1999/xlink",
+                    Wr = "https://www.w3.org/1999/xlink",
                     Ur = function (t) {
                         return ":" === t.charAt(5) && "xlink" === t.slice(0, 5);
                     },
@@ -2328,7 +2328,7 @@
                     for (var n in t) t[n] && (e && (e += " "), (e += n));
                     return e;
                 }
-                var no = { svg: "http://www.w3.org/2000/svg", math: "http://www.w3.org/1998/Math/MathML" },
+                var no = { svg: "https://www.w3.org/2000/svg", math: "https://www.w3.org/1998/Math/MathML" },
                     ro = m(
                         "html,body,base,head,link,meta,style,title,address,article,aside,footer,header,h1,h2,h3,h4,h5,h6,hgroup,nav,section,div,dd,dl,dt,figcaption,figure,picture,hr,img,li,main,ol,p,pre,ul,a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,rtc,ruby,s,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,embed,object,param,source,canvas,script,noscript,del,ins,caption,col,colgroup,table,thead,tbody,td,th,tr,button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,output,progress,select,textarea,details,dialog,menu,menuitem,summary,content,element,shadow,template,blockquote,iframe,tfoot"
                     ),
@@ -3841,7 +3841,7 @@
                 props: { notification: { type: Object }, showDispatchLog: { type: Boolean, default: !1 } },
                 methods: {
                     setGPSMarker: function (t) {
-                        void 0 !== t && fetch("http://orp_dispatch/setGPSMarker", { headers: { "Content-Type": "application/json" }, method: "POST", body: JSON.stringify({ gpsMarkerLocation: t }) });
+                        void 0 !== t && fetch("https://orp_dispatch/setGPSMarker", { headers: { "Content-Type": "application/json" }, method: "POST", body: JSON.stringify({ gpsMarkerLocation: t }) });
                     },
                 },
                 computed: {
@@ -3917,7 +3917,7 @@
                 mounted: function () {
                     var t = this;
                     window.addEventListener("keyup", function (e) {
-                        27 === e.keyCode && t.showDispatchLog && ((t.showDispatchLog = !1), fetch("http://orp_dispatch/disableGui"));
+                        27 === e.keyCode && t.showDispatchLog && ((t.showDispatchLog = !1), fetch("https://orp_dispatch/disableGui"));
                     });
                 },
                 created: function () {
@@ -5476,7 +5476,7 @@
                                                             s = {};
                                                         if (i && o) (s.emToPx = L.lastEmToPx), (s.percentToPxWidth = L.lastPercentToPxWidth), (s.percentToPxHeight = L.lastPercentToPxHeight);
                                                         else {
-                                                            var c = v && v.isSVG ? n.createElementNS("http://www.w3.org/2000/svg", "rect") : n.createElement("div");
+                                                            var c = v && v.isSVG ? n.createElementNS("https://www.w3.org/2000/svg", "rect") : n.createElement("div");
                                                             m.init(c),
                                                                 r.myParent.appendChild(c),
                                                                 f.each(["overflow", "overflowX", "overflowY"], function (t, e) {
@@ -8075,7 +8075,7 @@
                         })
                         .concat(u.classes)
                         .join(" "),
-                    g = { children: [], attributes: c({}, u.attributes, { "data-prefix": o, "data-icon": i, class: y, role: u.attributes.role || "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 ".concat(v, " ").concat(h) }) };
+                    g = { children: [], attributes: c({}, u.attributes, { "data-prefix": o, "data-icon": i, class: y, role: u.attributes.role || "img", xmlns: "https://www.w3.org/2000/svg", viewBox: "0 0 ".concat(v, " ").concat(h) }) };
                 p && (g.attributes[N] = ""), l && g.children.push({ tag: "title", attributes: { id: g.attributes["aria-labelledby"] || "title-".concat(xt()) }, children: [l] });
                 var b = c({}, g, { prefix: o, iconName: i, main: n, mask: r, transform: a, symbol: s, styles: u.styles }),
                     w = r.found && n.found ? Et(b) : $t(b),

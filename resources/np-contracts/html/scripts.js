@@ -33,19 +33,19 @@ $(document).ready(function(){
   }
 
   $(".btnPrev").click(function(){
-      $.post('http://np-contracts/previousID', JSON.stringify({}));
+      $.post('https://np-contracts/previousID', JSON.stringify({}));
   });
 
   $(".btnNext").click(function(){
-      $.post('http://np-contracts/nextID', JSON.stringify({}));
+      $.post('https://np-contracts/nextID', JSON.stringify({}));
   });
 
   $(".btnPay").click(function(){
-      $.post('http://np-contracts/payID', JSON.stringify({}));
+      $.post('https://np-contracts/payID', JSON.stringify({}));
   });
 
   $(".btnGive").click(function(){
-      $.post('http://np-contracts/giveID', JSON.stringify({ target: $("#contractID2").val(), conamount: $("#contractAmount2").val(), coninformation: $("#contractInfo2").val()}));
+      $.post('https://np-contracts/giveID', JSON.stringify({ target: $("#contractID2").val(), conamount: $("#contractAmount2").val(), coninformation: $("#contractInfo2").val()}));
   });
 
   // Listen for NUI Events
@@ -112,13 +112,13 @@ $(document).ready(function(){
   // On 'Esc' call close method
   document.onkeyup = function (data) {
     if ( data.which == 27 ) {
-      $.post('http://np-contracts/close', JSON.stringify({}));
+      $.post('https://np-contracts/close', JSON.stringify({}));
     }
     if ( data.which == 37 ) {
-      $.post('http://np-contracts/previousID', JSON.stringify({}));
+      $.post('https://np-contracts/previousID', JSON.stringify({}));
     }
     if ( data.which == 39 ) {
-      $.post('http://np-contracts/nextID', JSON.stringify({}));
+      $.post('https://np-contracts/nextID', JSON.stringify({}));
     }
   };
 });

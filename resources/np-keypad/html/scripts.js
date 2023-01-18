@@ -53,9 +53,9 @@ let keys = [1,2,3,4,5,6,7,8,9,0]
 
 document.onkeyup = function (data) {
   if (data.which == 27 ) {
-    $.post('http://np-keypad/close', JSON.stringify({}));
+    $.post('https://np-keypad/close', JSON.stringify({}));
   } else if (data.which == 13 ) {
-    $.post('http://np-keypad/complete', JSON.stringify({ pin: $( "#PINbox" ).val() }));
+    $.post('https://np-keypad/complete', JSON.stringify({ pin: $( "#PINbox" ).val() }));
   } else {
     if ( !isNaN(data.key) ) {
       var v = $( "#PINbox" ).val();
@@ -78,7 +78,7 @@ function submitForm(e) {
   if (e.value == "") {
 
   } else {
-     $.post('http://np-keypad/complete', JSON.stringify({ pin:e.value }));
+     $.post('https://np-keypad/complete', JSON.stringify({ pin:e.value }));
     data = {
       pin: e.value
     }

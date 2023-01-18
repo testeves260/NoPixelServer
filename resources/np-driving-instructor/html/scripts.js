@@ -54,7 +54,7 @@ $(document).ready(function () {
   function closeGui() {
     if (readOnly) {
       // Don't record data
-      $.post('http://np-driving-instructor/close', JSON.stringify({ cid: -1, points: 10, passed: true, results: {} }));
+      $.post('https://np-driving-instructor/close', JSON.stringify({ cid: -1, points: 10, passed: true, results: {} }));
     } else {
       curTest.results = {};
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
         curTest.results[name] = Number($(this).val());
       });
 
-      $.post('http://np-driving-instructor/close', JSON.stringify({ cid: curTest.cid, points: curTest.points, passed: curTest.passed, results: curTest.results }));
+      $.post('https://np-driving-instructor/close', JSON.stringify({ cid: curTest.cid, points: curTest.points, passed: curTest.passed, results: curTest.results }));
     }
   }
 

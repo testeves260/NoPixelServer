@@ -27,7 +27,7 @@ Complete List of Options:
         container
         buttons
 
-More details below or visit the creators website http://ned.im/noty/options.html
+More details below or visit the creators website https://ned.im/noty/options.html
 
 Layouts:
     top
@@ -93,7 +93,7 @@ killer: -- will close all visible notifications and show only this one
     true
     false
 
-visit the creators website http://ned.im/noty/options.html for more information
+visit the creators website https://ned.im/noty/options.html for more information
 --]]
 
 function SetQueueMax(queue, max)

@@ -15,7 +15,7 @@ $(document).ready(function(){
 
   function _keyup(e) {
     if (e.which == 27) {
-      $.post('http://np-webpages/close', JSON.stringify({}));
+      $.post('https://np-webpages/close', JSON.stringify({}));
     }
   }
 

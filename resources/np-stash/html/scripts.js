@@ -62,7 +62,7 @@ function playSound(file,volume)
 }
 
 function pinFailure() {
-  $.post('http://np-stash/failure', JSON.stringify({pinResult: false}));
+  $.post('https://np-stash/failure', JSON.stringify({pinResult: false}));
   gameOver = true;
   $('#modal').fadeIn();
   ++failedAttempts;
@@ -73,7 +73,7 @@ function pinFailure() {
 }
 
 function pinSuccess(pElevated) {
-  $.post('http://np-stash/complete', JSON.stringify({pinResult: true, owner: pElevated}));
+  $.post('https://np-stash/complete', JSON.stringify({pinResult: true, owner: pElevated}));
   playSound("lockUnlocked",0.6)
   gameOver = true;
   $('#modal').fadeIn();
@@ -135,7 +135,7 @@ function resetFails() {
 
 document.onkeyup = function (data) {
   if (data.which == 27 ) {
-    $.post('http://np-stash/close', JSON.stringify({pinResult: false}));
+    $.post('https://np-stash/close', JSON.stringify({pinResult: false}));
   }
 };
 

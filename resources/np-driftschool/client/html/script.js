@@ -20,11 +20,11 @@ $(function () {
 
     $('.secondary-content').on('click', function() {
         closeMenu();
-        $.post('http://np-driftschool/spawntestdrive', JSON.stringify({model: $(this).parents('li').attr('value')}));
+        $.post('https://np-driftschool/spawntestdrive', JSON.stringify({model: $(this).parents('li').attr('value')}));
     })
 
     $('#close').on('click', function() {
         closeMenu();
-        $.post('http://np-driftschool/closemenu', JSON.stringify({}));
+        $.post('https://np-driftschool/closemenu', JSON.stringify({}));
     })
 })

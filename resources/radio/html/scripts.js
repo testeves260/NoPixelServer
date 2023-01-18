@@ -20,9 +20,9 @@ $(document).ready(function () {
           RadioChannel = "0.0";
         }
       }
-      $.post("http://radio/close", JSON.stringify({ channel: RadioChannel }));
+      $.post("https://radio/close", JSON.stringify({ channel: RadioChannel }));
     } else {
-      $.post("http://radio/cleanClose", JSON.stringify({}));
+      $.post("https://radio/cleanClose", JSON.stringify({}));
     }
   }
 
@@ -86,15 +86,15 @@ $(document).ready(function () {
       $("#RadioChannel").focus();
       $("#RadioChannel").val(RadioChannel === "0.0" ? "" : RadioChannel);
       $("#RadioChannel").attr("placeholder", "100.0-999.9");
-      $.post("http://radio/click", JSON.stringify({}));
+      $.post("https://radio/click", JSON.stringify({}));
       $.post(
-        "http://radio/poweredOn",
+        "https://radio/poweredOn",
         JSON.stringify({ channel: RadioChannel })
       );
     } else {
       Powered = false;
-      $.post("http://radio/click", JSON.stringify({}));
-      $.post("http://radio/poweredOff", JSON.stringify({}));
+      $.post("https://radio/click", JSON.stringify({}));
+      $.post("https://radio/poweredOff", JSON.stringify({}));
 
       $("#RadioChannel").val("");
       $("#RadioChannel").attr("placeholder", "Off");
@@ -102,13 +102,13 @@ $(document).ready(function () {
     }
   });
   $("#volumeUp").click(function () {
-    $.post("http://radio/click", JSON.stringify({}));
-    $.post("http://radio/volumeUp", JSON.stringify({}));
+    $.post("https://radio/click", JSON.stringify({}));
+    $.post("https://radio/volumeUp", JSON.stringify({}));
   });
 
   $("#volumeDown").click(function () {
-    $.post("http://radio/click", JSON.stringify({}));
-    $.post("http://radio/volumeDown", JSON.stringify({}));
+    $.post("https://radio/click", JSON.stringify({}));
+    $.post("https://radio/volumeDown", JSON.stringify({}));
   });
 
   // On 'Esc' call close method

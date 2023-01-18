@@ -136,7 +136,7 @@ $(function() {
                 var menu = $( "#btn" + btnSelected ).attr("menu")
                 if (menu == currentAmountOfMenus-1)
                 {
-                    $.post('http://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
+                    $.post('https://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
                 }
                 else
                 {
@@ -170,11 +170,11 @@ $(function() {
                                 }
                             }
                         }
-                         $.post('http://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
+                         $.post('https://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
                     }
                     else
                     {
-                        $.post('http://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
+                        $.post('https://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname , name: event.data.name, buttonType: event.data.buttonType })); 
                     }
                 }
                 
@@ -205,7 +205,7 @@ $(function() {
             i.setAttribute('value',event.data.functionname);
             i.setAttribute('type',"button");
             i.innerHTML = event.data.name;
-            i.onclick = function () { $.post('http://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname })); }; 
+            i.onclick = function () { $.post('https://uitest/runfunction', JSON.stringify({  functionset: event.data.functionname })); }; 
             i.onmouseover = function () {
                 $( "#btn" + btnSelected ).removeClass('selected');
                 btnSelected = event.id;
@@ -238,22 +238,22 @@ $(function() {
 
     document.onkeyup = function (data) {
         if (data.which == 27) { // Escape key
-           $.post('http://uitest/escape', JSON.stringify({}));
+           $.post('https://uitest/escape', JSON.stringify({}));
         }
         if (data.which == 113) { // f2
-           $.post('http://uitest/escape', JSON.stringify({}));
+           $.post('https://uitest/escape', JSON.stringify({}));
         }
         if (data.which == 37) { // left
-            $.post('http://uitest/left', JSON.stringify({}));
+            $.post('https://uitest/left', JSON.stringify({}));
         }
         if (data.which == 39) { // right
-            $.post('http://uitest/right', JSON.stringify({}));
+            $.post('https://uitest/right', JSON.stringify({}));
         }
         if (data.which == 38) { // Up
-            $.post('http://uitest/up', JSON.stringify({}));
+            $.post('https://uitest/up', JSON.stringify({}));
         }
         if (data.which == 40) { // Down
-            $.post('http://uitest/down', JSON.stringify({}));
+            $.post('https://uitest/down', JSON.stringify({}));
         }
         if (data.which == 13) { // Enter
             btnEnter();
@@ -265,7 +265,7 @@ $(function() {
 
         if ($(this).attr("value") == "close") {
             //do button 1 thing
-             $.post('http://uitest/escape', JSON.stringify({}));
+             $.post('https://uitest/escape', JSON.stringify({}));
         }
 
     });

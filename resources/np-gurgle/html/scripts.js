@@ -33,7 +33,7 @@ $(document).ready(function(){
   }
   $(".btnSubmit").click(function(){
 
-      $.post('http://np-gurgle/btnSubmit', JSON.stringify({
+      $.post('https://np-gurgle/btnSubmit', JSON.stringify({
           websiteName: $(".contractID").val(),
           websiteKeywords: $(".contractAmount").val(),
           websiteDescription: $(".contractInfo").val()
@@ -73,7 +73,7 @@ $(document).ready(function(){
   // On 'Esc' call close method
   document.onkeyup = function (data) {
     if ( data.which == 27 ) {
-      $.post('http://np-gurgle/close', JSON.stringify({}));
+      $.post('https://np-gurgle/close', JSON.stringify({}));
     }
   };
 });

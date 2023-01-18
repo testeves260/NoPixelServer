@@ -14,7 +14,7 @@ $(function()
 })
 
 function sendNuiMessage(data){
-    $.post("http://np-admin/nuiMessage", JSON.stringify(data));
+    $.post("https://np-admin/nuiMessage", JSON.stringify(data));
 }
 
 function receivedNuiMessage(event){

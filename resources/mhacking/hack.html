@@ -76,7 +76,7 @@
 
 				var timeleft = ((endTime - (new Date()).getTime())/1000.0).toFixed(2)
 
-				setTimeout(function(){$.post('http://mhacking/callback', JSON.stringify({'success': true, 'timeremaining' : timeleft, 'locationID' : locationID}));}, 2000);
+				setTimeout(function(){$.post('https://mhacking/callback', JSON.stringify({'success': true, 'timeremaining' : timeleft, 'locationID' : locationID}));}, 2000);
 			}, 2000);
 			resetGameState();
 		}
@@ -124,7 +124,7 @@
 				fadeBigMsg(true); 
 				playSound('audiofail',0.3);
 				iNeedTimer = false
-				$.post('http://mhacking/callback', JSON.stringify({'success': false, 'locationID' : locationID}));
+				$.post('https://mhacking/callback', JSON.stringify({'success': false, 'locationID' : locationID}));
 			}, 2000);
 			resetGameState();
 		} else {

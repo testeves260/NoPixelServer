@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   function _keyup(e) {
     if (e.which == 27){
-      $.post('http://np-warrants/close', JSON.stringify({}));
+      $.post('https://np-warrants/close', JSON.stringify({}));
       closeAll();
     }
   }

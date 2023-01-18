@@ -116,7 +116,7 @@ $(document).ready(function(){
 
     function gameOver() {
       playSound("failure",0.5)
-      $.post('http://np-thermite/failure', JSON.stringify({}));
+      $.post('https://np-thermite/failure', JSON.stringify({}));
       gameOn = false;
       clearInterval(cleanupInterval);
       getAllAnimations().forEach(function(anim) {
@@ -198,7 +198,7 @@ $(document).ready(function(){
       {
         soundSet = true
         playSound("success",0.9)
-        $.post('http://np-thermite/complete', JSON.stringify({}));
+        $.post('https://np-thermite/complete', JSON.stringify({}));
       }
     }
     setupNextLetter();
@@ -284,7 +284,7 @@ $(document).ready(function(){
 
   document.onkeyup = function (data) {
       if (data.which == 27 ) {
-        $.post('http://np-thermite/close', JSON.stringify({}));
+        $.post('https://np-thermite/close', JSON.stringify({}));
       }
     };
 

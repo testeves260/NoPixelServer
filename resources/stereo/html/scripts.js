@@ -17,9 +17,9 @@ $(document).ready(function(){
 
   function closeGui() {
       if (Powered) {
-        $.post('http://stereo/close', JSON.stringify({ channel: stations[currentStation] }));
+        $.post('https://stereo/close', JSON.stringify({ channel: stations[currentStation] }));
       } else {
-        $.post('http://stereo/cleanClose', JSON.stringify({ }));
+        $.post('https://stereo/cleanClose', JSON.stringify({ }));
       }
   }
 
@@ -78,26 +78,26 @@ $(document).ready(function(){
     if (Powered === false) {
       Powered = true;
       $("#RadioChannel").val(stations[currentStation])
-      $.post('http://stereo/click', JSON.stringify({}));
-      $.post('http://stereo/poweredOn', JSON.stringify({ channel: stations[currentStation] }));
+      $.post('https://stereo/click', JSON.stringify({}));
+      $.post('https://stereo/poweredOn', JSON.stringify({ channel: stations[currentStation] }));
       $("#DisplayStation").html(stations[currentStation])
     } else {
       Powered = false;
-      $.post('http://stereo/click', JSON.stringify({}));
-      $.post('http://stereo/poweredOff', JSON.stringify({}));
+      $.post('https://stereo/click', JSON.stringify({}));
+      $.post('https://stereo/poweredOff', JSON.stringify({}));
 
       $("#RadioChannel").val(0)
       $("#DisplayStation").html("0000.0")
     }   
   });
   $("#volumeUp").click(function() {
-    $.post('http://stereo/click', JSON.stringify({}));
-    $.post('http://stereo/volumeUp', JSON.stringify({}));
+    $.post('https://stereo/click', JSON.stringify({}));
+    $.post('https://stereo/volumeUp', JSON.stringify({}));
   });
   
   $("#volumeDown").click(function() {
-    $.post('http://stereo/click', JSON.stringify({}));
-    $.post('http://stereo/volumeDown', JSON.stringify({}));
+    $.post('https://stereo/click', JSON.stringify({}));
+    $.post('https://stereo/volumeDown', JSON.stringify({}));
   });
 
   $("#radioChange").click(function() {
@@ -121,9 +121,9 @@ $(document).ready(function(){
       {
         $("#DisplayStation").html(stations[currentStation])  
       }
-      $.post('http://stereo/channelChange', JSON.stringify({ channel: stations[currentStation] }));
+      $.post('https://stereo/channelChange', JSON.stringify({ channel: stations[currentStation] }));
     }
-    $.post('http://stereo/click', JSON.stringify({}));
+    $.post('https://stereo/click', JSON.stringify({}));
   });
 
   

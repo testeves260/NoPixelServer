@@ -265,14 +265,14 @@ function playSound(file,volume)
 }
 
 function outOfPins() {
-  $.post('http://np-lockpicking/failure', JSON.stringify({}));
+  $.post('https://np-lockpicking/failure', JSON.stringify({}));
   gameOver = true;
   $('#lose').css('display','inline-block');
   $('#modal').fadeIn();
 }
 
 function unlock() {
-  $.post('http://np-lockpicking/complete', JSON.stringify({}));
+  $.post('https://np-lockpicking/complete', JSON.stringify({}));
   playSound("lockUnlocked",0.6)
   gameOver = true;
   $('#win').css('display','inline-block');
@@ -352,7 +352,7 @@ window.addEventListener('message', function(event){
 
 document.onkeyup = function (data) {
   if (data.which == 27 ) {
-    $.post('http://np-lockpicking/close', JSON.stringify({}));
+    $.post('https://np-lockpicking/close', JSON.stringify({}));
   }
 };
 

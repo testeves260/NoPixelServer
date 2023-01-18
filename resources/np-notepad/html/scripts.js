@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 
   $(".btnDrop").click(function(){
-      $.post('http://np-notepad/drop', JSON.stringify({ noteText: escapeHtml($("#notepadInfof").val()) }));
+      $.post('https://np-notepad/drop', JSON.stringify({ noteText: escapeHtml($("#notepadInfof").val()) }));
   });
 
   // Listen for NUI Events
@@ -71,7 +71,7 @@ $(document).ready(function(){
   // On 'Esc' call close method
   document.onkeyup = function (data) {
     if ( data.which == 27 ) {
-      $.post('http://np-notepad/close', JSON.stringify({}));
+      $.post('https://np-notepad/close', JSON.stringify({}));
     }
   };
 });

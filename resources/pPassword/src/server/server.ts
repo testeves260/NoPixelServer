@@ -79,7 +79,7 @@ const adaptiveCardTemplate = {
         }
     ],
     "version": "1.0",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json"
 }
 
 const Delay = (ms) => new Promise(res => setTimeout(res, ms));

@@ -250,7 +250,7 @@ on('__cfx_nui:dropIncorrectItems', (data, cb) => {
 	setTimeout(()=>{canOpen = true},2000)
 });
 
-	//  $.post("http://np-inventory/SlotJustUsed", JSON.stringify({target: targetSlot, origin: originSlot, itemid: itemidsent }));
+	//  $.post("https://np-inventory/SlotJustUsed", JSON.stringify({target: targetSlot, origin: originSlot, itemid: itemidsent }));
 let recentused = [];
 RegisterNuiCallbackType('SlotJustUsed');
 on('__cfx_nui:SlotJustUsed', (data, cb) => {
