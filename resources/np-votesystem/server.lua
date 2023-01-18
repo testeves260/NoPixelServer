@@ -321,7 +321,7 @@ AddEventHandler('server:givepass', function(pass_type, wrank, cid)
           exports.ghmattimysql:execute("UPDATE character_passes SET `rank` = @rank, `giver` = @giver WHERE cid  = @id", { ['id'] = cid, ['rank'] = wrank, ['giver'] = char.first_name .. ' ' .. char.last_name})
         else
           -- TriggerClientEvent('DoShortHudText', src, 'Person is not in your group', 2)
-          exports.ghmattimysql:execute("INSERT INTO character_passes(cid, rank, name, giver, pass_type, business_name) values (@id, @rank, @name, @giver, @gang_id, @business_name)",
+          exports.ghmattimysql:execute("INSERT INTO character_passes(cid, `rank`, name, giver, pass_type, business_name) values (@id, @rank, @name, @giver, @gang_id, @business_name)",
           {
               ['id'] = cid,
               ['rank'] = wrank,
@@ -335,7 +335,6 @@ AddEventHandler('server:givepass', function(pass_type, wrank, cid)
     end)
   end)
 end)
-
 
 RegisterServerEvent('server:givepayGroup')
 AddEventHandler('server:givepayGroup', function(groupname, amount, cid)
