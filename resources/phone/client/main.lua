@@ -715,11 +715,16 @@ function findVehFromPlateAndSpawn(plate)
     if vehPlate == plate then
       state = value.vehicle_state
       coordlocation = value.coords
+      local playerCoords = GetEntityCoords(PlayerPedId())
 
-      if #(vector3(coordlocation.x, coordlocation.y, coordlocation.z) - GetEntityCoords(PlayerPedId())) < 10.0 and state == "Out" then
+      local distanceBetween = #tostring(GetDistanceBetweenCoords(coordlocation.x, coordlocation.y, coordlocation.z, playerCoords.x, playerCoords.y, playerCoords.z, true))
+      print(coordlocation)
+      print(state)
+      print(distanceBetween)
 
+      if distanceBetween > 10.0 and state == "Out" then
         local DoesVehExistInProximity = CheckExistenceOfVehWithPlate(vehPlate)
-
+        print("HERE")
         if not DoesVehExistInProximity and not recentspawnrequest then
           recentspawnrequest = true
           TriggerServerEvent("garages:phonespawn",vehPlate)
@@ -730,7 +735,7 @@ function findVehFromPlateAndSpawn(plate)
         end
 
       end
-
+      print("Not in range")
     end
 
   end
