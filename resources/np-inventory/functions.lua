@@ -1046,8 +1046,6 @@ function TaskItem(dictionary,animation,typeAnim,timer,message,func,remove,itemid
     end
 end
 
-
-
 function GetCurrentWeapons()
     local returnTable = {}
     for i,v in pairs(clientInventory) do
@@ -1088,7 +1086,6 @@ function hasEnoughOfItem(itemid,amount,shouldReturnText)
     return false
 end
 
-
 function isValidUseCase(itemID,isWeapon)
     local player = PlayerPedId()
     local playerVeh = GetVehiclePedIsIn(player, false)
@@ -1121,7 +1118,6 @@ function isValidUseCase(itemID,isWeapon)
             return false
         end
     end
-
     return true
 end
 

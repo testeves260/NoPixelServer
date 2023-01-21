@@ -717,6 +717,8 @@ RegisterNetEvent('inventory-open-target')
 on('inventory-open-target', (information) => {
 	//misc.UpdateInventory(playerinventory, itemCount, "inv target player");
 
+	console.log("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
+
 	let returnInv = BuildInventory(information[0])
 
 	let playerinventory = returnInv[0]
@@ -847,12 +849,9 @@ RegisterNetEvent('inventory-open-target-NoInject')
 on('inventory-open-target-NoInject', (playerinventory, itemCount, invName) => {
 
 	if (canOpen === true) {
-
-
 		let returnInv = BuildInventory(information[0])
 		playerinventory = returnInv[0]
 		itemCount = returnInv[1]
-
 
 		MyInventory = playerinventory;
 		MyItemCount = itemCount;
@@ -866,6 +865,7 @@ on('inventory-util-canOpen', (openStatus) => {
 });
 
 function BuildInventory(Inventory) {
+	console.log(Inventory)
 	let buildInv = Inventory
 	let invArray = {};
 	itemCount = 0;
