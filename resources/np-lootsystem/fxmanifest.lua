@@ -1,8 +1,9 @@
 fx_version 'cerulean'
+game "gta5"
 
-games { "gta5" }
-
+author 'unknown'
 description "Loot System"
+version '1.0.0'
 
 server_scripts {
     "server/classes/*.lua",

@@ -1,10 +1,14 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'unknown'
+description 'Just a Keypad Script'
+version '1.0.0'
 
-client_script "@np-errorlog/client/cl_errorlog.lua"
-
-client_script 'keypad_client.lua'
+client_scripts {
+	"@np-errorlog/client/cl_errorlog.lua",
+	'keypad_client.lua'
+} 
 
 ui_page 'html/ui.html'
 files {

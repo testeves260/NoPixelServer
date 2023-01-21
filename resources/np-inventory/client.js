@@ -717,8 +717,6 @@ RegisterNetEvent('inventory-open-target')
 on('inventory-open-target', (information) => {
 	//misc.UpdateInventory(playerinventory, itemCount, "inv target player");
 
-	console.log("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
-
 	let returnInv = BuildInventory(information[0])
 
 	let playerinventory = returnInv[0]

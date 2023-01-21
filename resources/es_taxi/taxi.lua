@@ -65,9 +65,6 @@ AddEventHandler("np-jobmanager:playerBecameJob", function(job)
 	end
 end)
 
-
-
-
 jobs = {peds = {}, flag = {}, blip = {}, cars = {}, coords = {cx={}, cy={}, cz={}}}
 
 function StartJob(jobid)
@@ -140,31 +137,31 @@ function StartJob(jobid)
 		jobs.coords.cx[65],jobs.coords.cy[65],jobs.coords.cz[65] = 159.458, -27.555, 67.380
 		jobs.coords.cx[66],jobs.coords.cy[66],jobs.coords.cz[66] = -36.382, -106.912, 56.982
 		jobs.coords.cx[67],jobs.coords.cy[67],jobs.coords.cz[67] = -355.801, -270.404, 33.011
-    jobs.coords.cx[68],jobs.coords.cy[68],jobs.coords.cz[68] = -831.196, -76.871, 37.323
-    jobs.coords.cx[69],jobs.coords.cy[69],jobs.coords.cz[69] = -1038.707, -214.593, 37,437
+		jobs.coords.cx[68],jobs.coords.cy[68],jobs.coords.cz[68] = -831.196, -76.871, 37.323
+		jobs.coords.cx[69],jobs.coords.cy[69],jobs.coords.cz[69] = -1038.707, -214.593, 37,437
 		jobs.coords.cx[70],jobs.coords.cy[70],jobs.coords.cz[70] = 1918.448, 3691.410, 32.261
 		jobs.coords.cx[71],jobs.coords.cy[71],jobs.coords.cz[71] = 1820.217, 3697.115, 33.493
 		jobs.coords.cx[72],jobs.coords.cy[72],jobs.coords.cz[72] = 1619.323, 3827.162, 34.482
 		jobs.coords.cx[73],jobs.coords.cy[73],jobs.coords.cz[73] = 1418.628, 3602.243, 34.511
-    jobs.coords.cx[74],jobs.coords.cy[74],jobs.coords.cz[74] = 1944.858, 3856.252, 31.741
-    jobs.coords.cx[75],jobs.coords.cy[75],jobs.coords.cz[75] = 2285.278, 3839.444, 34.023
-    jobs.coords.cx[76],jobs.coords.cy[76],jobs.coords.cz[76] = 2760.945, 3387.813, 55.659
-    jobs.coords.cx[77],jobs.coords.cy[77],jobs.coords.cz[77] = 1952.819, 2627.731, 45.368
-    jobs.coords.cx[78],jobs.coords.cy[78],jobs.coords.cz[78] = 1051.414, 474.833, 93.653
-    jobs.coords.cx[79],jobs.coords.cy[79],jobs.coords.cz[79] = 866.393, 17.635, 78.654
-    jobs.coords.cx[80],jobs.coords.cy[80],jobs.coords.cz[80] = 318.985, 167.410, 103.335
-    jobs.coords.cx[81],jobs.coords.cy[81],jobs.coords.cz[81] = 88.836, 254.054, 108.236
-    jobs.coords.cx[82],jobs.coords.cy[82],jobs.coords.cz[82] = -44.852, 70.414, 72.437
-    jobs.coords.cx[83],jobs.coords.cy[83],jobs.coords.cz[83] = -115.496, 84.333, 70.792
-    jobs.coords.cx[84],jobs.coords.cy[84],jobs.coords.cz[84] = -384.806, 226.868, 83.548
-    jobs.coords.cx[85],jobs.coords.cy[85],jobs.coords.cz[85] = -578.669, 139.085, 61.337
-    jobs.coords.cx[86],jobs.coords.cy[86],jobs.coords.cz[86] = -651.334, -584.879, 34.116
-    jobs.coords.cx[87],jobs.coords.cy[87],jobs.coords.cz[87] = -571.847, -1195.648, 17.869
-    jobs.coords.cx[88],jobs.coords.cy[88],jobs.coords.cz[88] = -1513.271, -670.039, 28.362
-    jobs.coords.cx[89],jobs.coords.cy[89],jobs.coords.cz[89] = -1297.484, -654.913, 26.123
-    jobs.coords.cx[90],jobs.coords.cy[90],jobs.coords.cz[90] = -1645.546, 144.571, 61.664
-    jobs.coords.cx[91],jobs.coords.cy[91],jobs.coords.cz[91] = -1160.618, 744.418, 154.571
-    jobs.coords.cx[92],jobs.coords.cy[92],jobs.coords.cz[92] = -798.090, 831.699, 204.351
+		jobs.coords.cx[74],jobs.coords.cy[74],jobs.coords.cz[74] = 1944.858, 3856.252, 31.741
+		jobs.coords.cx[75],jobs.coords.cy[75],jobs.coords.cz[75] = 2285.278, 3839.444, 34.023
+		jobs.coords.cx[76],jobs.coords.cy[76],jobs.coords.cz[76] = 2760.945, 3387.813, 55.659
+		jobs.coords.cx[77],jobs.coords.cy[77],jobs.coords.cz[77] = 1952.819, 2627.731, 45.368
+		jobs.coords.cx[78],jobs.coords.cy[78],jobs.coords.cz[78] = 1051.414, 474.833, 93.653
+		jobs.coords.cx[79],jobs.coords.cy[79],jobs.coords.cz[79] = 866.393, 17.635, 78.654
+		jobs.coords.cx[80],jobs.coords.cy[80],jobs.coords.cz[80] = 318.985, 167.410, 103.335
+		jobs.coords.cx[81],jobs.coords.cy[81],jobs.coords.cz[81] = 88.836, 254.054, 108.236
+		jobs.coords.cx[82],jobs.coords.cy[82],jobs.coords.cz[82] = -44.852, 70.414, 72.437
+		jobs.coords.cx[83],jobs.coords.cy[83],jobs.coords.cz[83] = -115.496, 84.333, 70.792
+		jobs.coords.cx[84],jobs.coords.cy[84],jobs.coords.cz[84] = -384.806, 226.868, 83.548
+		jobs.coords.cx[85],jobs.coords.cy[85],jobs.coords.cz[85] = -578.669, 139.085, 61.337
+		jobs.coords.cx[86],jobs.coords.cy[86],jobs.coords.cz[86] = -651.334, -584.879, 34.116
+		jobs.coords.cx[87],jobs.coords.cy[87],jobs.coords.cz[87] = -571.847, -1195.648, 17.869
+		jobs.coords.cx[88],jobs.coords.cy[88],jobs.coords.cz[88] = -1513.271, -670.039, 28.362
+		jobs.coords.cx[89],jobs.coords.cy[89],jobs.coords.cz[89] = -1297.484, -654.913, 26.123
+		jobs.coords.cx[90],jobs.coords.cy[90],jobs.coords.cz[90] = -1645.546, 144.571, 61.664
+		jobs.coords.cx[91],jobs.coords.cy[91],jobs.coords.cz[91] = -1160.618, 744.418, 154.571
+		jobs.coords.cx[92],jobs.coords.cy[92],jobs.coords.cz[92] = -798.090, 831.699, 204.351
 
 		jobs.cars[1] = GetVehiclePedIsUsing(PlayerPedId())
 		jobs.flag[1] = 0
@@ -188,9 +185,10 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
     AddTextComponentString(text)
     DrawTxtTaxi(x - width/2, y - height/2 + 0.005)
 end
-local counter = 0
-function DrawTxtTaxi(text, showtime)
 
+local counter = 0
+
+function DrawTxtTaxi(text, showtime)
 	TriggerEvent("DoLongHudText",text,69)
     Citizen.Wait(1000)
 end
@@ -232,7 +230,9 @@ function StopJob(jobid)
 		jobs.flag[2] = nil
 	end
 end
+
 local paymenttaxilolhehe = 0
+
 Citizen.CreateThread(function()
 	while true do
 		Wait(0)
@@ -240,7 +240,6 @@ Citizen.CreateThread(function()
 			if IsPedSittingInAnyVehicle(PlayerPedId()) then
 				if IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()), GetHashKey("taxi", _r)) then
 					TriggerEvent("DoLongHudText","Type /phone to check for any active Job Alerts!",1)
-
 					StartJob(1)
 				end
 			end

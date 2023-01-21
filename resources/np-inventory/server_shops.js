@@ -1,3 +1,9 @@
+ITEMS = {}
+ITEMS
+
+
+
+
 function PoliceArmory() {
     var shopItems = [
         { item_id: "3219281620", id: 0, name: "Shop", information: "{}", slot: 1, amount: 5 },
@@ -99,6 +105,7 @@ function TacoTruck() {
     ];
     return JSON.stringify(shopItems);
 }
+
 function burgiestore() {
     var shopItems = [
         { item_id: "bleederburger", id: 0, name: "shop", information: "{}", slot: 1, amount: 50 },
@@ -113,18 +120,12 @@ function burgiestore() {
     return JSON.stringify(shopItems);
 }
 
-
-
-
-
 function JailMeth() {
     var shopItems = [
         { item_id: "methbag", id: 0, name: "Shop", information: "{}", slot: 1, amount: 1 },
     ];
     return JSON.stringify(shopItems);
 }
-
-
 
 function Mechanic() {
     var shopItems = [

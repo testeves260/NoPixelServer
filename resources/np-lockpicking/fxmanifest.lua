@@ -1,14 +1,14 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'unknown'
+description 'Just a LockPicking Script'
+version '1.0.0'
 
-client_script "@np-errorlog/client/cl_errorlog.lua"
-
-client_script 'lockpicking_client.lua'
-server_export 'startRobbery'
-
-export "lockpick"
-
+client_scripts {
+	"@np-errorlog/client/cl_errorlog.lua",
+	'lockpicking_client.lua'
+}
 
 ui_page 'html/ui.html'
 files {
@@ -31,3 +31,6 @@ files {
 	'html/debounce.min.js',
 	'html/background2.png'
 }
+
+server_export 'startRobbery'
+export "lockpick"

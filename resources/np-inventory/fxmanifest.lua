@@ -1,16 +1,28 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'unknown'
+description 'Inventory Script'
+version '1.0.0'
 
 dependencies {
     "PolyZone"
 }
 
-client_script "@np-errorlog/client/cl_errorlog.lua"
-client_script "@PolyZone/client.lua"
+client_scripts {
+	"@np-errorlog/client/cl_errorlog.lua",
+	"@PolyZone/client.lua",
+	'client.js',
+	'functions.lua'
+}
+
+server_scripts {
+	'server_degradation.js',
+	'server_shops.js',
+	'server.js'
+}
 
 ui_page 'nui/ui.html'
-
 files {
 	"nui/ui.html",
 	"nui/pricedown.ttf",
@@ -29,13 +41,6 @@ files {
   }
 
 shared_script 'shared_list.js'
-client_script 'client.js'
-client_script 'functions.lua'
-server_script 'server_degradation.js'
-server_script 'server_shops.js'
-server_script 'server.js'
-server_script 'server.lua'
-
 
 exports{
 	'hasEnoughOfItem',

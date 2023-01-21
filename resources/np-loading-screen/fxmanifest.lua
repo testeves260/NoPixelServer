@@ -1,3 +1,12 @@
+fx_version 'cerulean'
+game 'gta5'
+
+author 'unknown'
+description 'Just a Loading Screen Script'
+version '1.0.0'
+
+client_script "client.lua"
+
 files {
     'index.html',
     'style.css',
@@ -7,10 +16,4 @@ files {
 }
 
 loadscreen 'index.html'
-
 loadscreen_manual_shutdown "yes"
-
-client_script "client.lua"
-
-fx_version 'cerulean'
-games {'gta5'}

@@ -1,18 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
 
-client_script "@np-errorlog/client/cl_errorlog.lua"
+author 'koil'
+description 'GasStation script'
+version '1.0.0'
+
+client_scripts {
+	"@np-errorlog/client/cl_errorlog.lua",
+	'client.lua'
+} 
+
 ui_page 'html/ui.html'
-
-
-
 files {
 	'html/*',
 }
-
-
-
-
-client_script 'client.lua'
-
-

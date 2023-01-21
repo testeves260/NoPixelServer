@@ -1,10 +1,9 @@
 fx_version 'cerulean'
 game 'gta5'
 
-client_scripts {
-	'client.lua'
-}
+author 'unknown'
+description 'Robbery: Jewelery Robbery script'
+version '1.0.0'
 
-server_scripts {
-	'server.lua'
-}
+client_script 'client.lua'
+server_script 'server.lua'

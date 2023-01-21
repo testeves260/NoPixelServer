@@ -1,13 +1,16 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'unknown'
+description 'MENU Script'
+version '1.0.0'
+
 client_script {
     "config.lua",
     "client_menu.lua"
 }
 
 ui_page "html/ui.html"
-
 files {
 	"html/ui.html",
 	"html/css/RadialMenu.css",

@@ -1,38 +1,40 @@
 fx_version 'cerulean'
 game 'gta5'
 
-dependency "np-base"
-dependency "ghmattimysql"
+author 'koil'
+description 'Admin Menu script'
+version '1.0.0'
 
-client_script "@np-errorlog/client/cl_errorlog.lua"
-client_script "@warmenu/warmenu.lua"
+dependencies {
+    "np-base",
+    "ghmattimysql"
+}
 
-client_script "@np-infinity/client/cl_lib.lua"
-server_script "@np-infinity/server/sv_lib.lua"
+client_scripts {
+    "@np-errorlog/client/cl_errorlog.lua",
+    "@warmenu/warmenu.lua",
+    "@np-infinity/client/cl_lib.lua",
+    "shared/sh_admin.lua",
+    "client/cl_menu.lua",
+    "client/cl_noclip.lua",
+    "shared/sh_commands.lua",
+    "shared/sh_ranks.lua",
+    "client/cl_admin.lua"
+}
 
+server_scripts {
+    "@np-infinity/server/sv_lib.lua",
+    "shared/sh_admin.lua",
+    "shared/sh_commands.lua",
+    "shared/sh_ranks.lua",
+    "server.lua",
+    "server/sv_db.lua",
+    "server/sv_admin.lua"
+} 
 
 ui_page "html/index.html"
-
-files({
+files {
     "html/index.html",
     "html/script.js",
     "html/styles.css"
-})
-
-server_script "shared/sh_admin.lua"
-server_script "shared/sh_commands.lua"
-server_script "shared/sh_ranks.lua"
-
-client_script "shared/sh_admin.lua"
-
-client_script "client/cl_menu.lua"
-client_script "client/cl_noclip.lua"
-
-client_script "shared/sh_commands.lua"
-client_script "shared/sh_ranks.lua"
-
-server_script "server.lua"
-server_script "server/sv_db.lua"
-server_script "server/sv_admin.lua"
-
-client_script "client/cl_admin.lua"
+}

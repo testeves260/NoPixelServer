@@ -733,13 +733,10 @@ function findVehFromPlateAndSpawn(plate)
         else
           print("Found vehicle already existing!")
         end
-
       end
       print("Not in range")
     end
-
   end
-
 end
 
 RegisterNetEvent("phone:SpawnVehicle")

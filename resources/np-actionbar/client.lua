@@ -133,13 +133,8 @@ function DrawText3D(x,y,z, text) -- some useful function, use it if you want!
     end
 end
 
-
-
-
 local Drops = {}
 local allowwait = false
-
-
 
 function getDropChance(startingChance)
 	local chance = startingChance
@@ -294,9 +289,6 @@ local animName = "0"
 local prop = "prop_ballistic_shield"
 local pistol = `WEAPON_PISTOL`
 
-
-
-
 local lastWeaponDeg = 0
 function attemptToDegWeapon()
 	if math.random(100) > 85 then
@@ -412,12 +404,8 @@ end)
 RegisterNetEvent('equipWeaponID')
 AddEventHandler('equipWeaponID', function(hash,newInformation,sqlID)
 	--GiveAmmoNow()
-	
 	CurrentSqlID = sqlID
 	currentInformation = json.decode(newInformation)
-
-	
-
 
 	if (currentInformation.cartridge == nil) then
 		currentInformation = "Scratched off data"
@@ -484,8 +472,6 @@ function ammoTypeCheck(atype)
 		end
 	end
 end
-
-
 
 RegisterNetEvent('actionbar:ammo')
 AddEventHandler('actionbar:ammo', function(hash,amount,addition)
@@ -614,8 +600,6 @@ AddEventHandler('actionbar:setEmptyHanded', function()
 	SetCurrentPedWeapon(PlayerPedId(), `WEAPON_UNARMED`, true)
 end)
 
-
-
 function updateAmmo()
 
 	if prevupdate > 0 then
@@ -654,7 +638,6 @@ function updateAmmo()
 
 	return newammo
 end
-
 
 function getAmmo(hash)
 	if (throwableWeapons[""..hash..""]) then
@@ -796,8 +779,6 @@ function unholster1h(weaponHash)
 
 end
 
-
-
 function AttachmentCheck(weaponhash)
 
 	if exports["np-inventory"]:hasEnoughOfItem("silencer_l",1,false) then
@@ -844,12 +825,7 @@ function AttachmentCheck(weaponhash)
 	if exports["np-inventory"]:hasEnoughOfItem("extended_tec9",1,false) then
 		GiveWeaponComponentToPed( PlayerPedId(), weaponhash, `COMPONENT_MACHINEPISTOL_CLIP_02` )	
 	end
-
-
-
-
 end
-
 
 function copunholster(weaponHash)
   local dic = "reaction@intimidation@cop@unarmed"
@@ -868,7 +844,6 @@ function copunholster(weaponHash)
 	
 	SetCurrentPedWeapon(ped, weaponHash, 1)
 	ClearPedTasks(ped)
-
 end
 
 function copholster()
@@ -889,6 +864,7 @@ function copholster()
 	RemoveAllPedWeapons(ped)
 	ClearPedTasks(ped)
 end
+
 function holster1h()
 	unholsteringactive = true
 	local dict = "reaction@intimidation@1h"

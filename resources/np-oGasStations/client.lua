@@ -686,7 +686,7 @@ end)
  local containerWidth = 100 -- width of the image container
  
  -- local width =  (imageWidth / containerWidth) * 100; -- used to convert image width if changed
- local width =  0;
+ local width =  0
  local south = (-imageWidth) + width
  local west = (-imageWidth * 2) + width
  local north = (-imageWidth * 3) + width
